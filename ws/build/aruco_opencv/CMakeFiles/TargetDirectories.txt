@@ -1,0 +1,12 @@
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/uninstall.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/aruco_opencv_uninstall.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/aruco_opencv.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/aruco_tracker.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/aruco_tracker_autostart.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/test.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/edit_cache.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/rebuild_cache.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/list_install_components.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/install.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/install/local.dir
+/home/assignments/assignment3/ws/build/aruco_opencv/CMakeFiles/install/strip.dir

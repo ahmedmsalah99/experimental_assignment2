@@ -1,0 +1,420 @@
+[0.173s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.173s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f1983116000>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1983115c70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1983115c70>>, mixin_verb=('build',))
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.234s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.234s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.235s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.235s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/assignments/assignment3/ws'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1) by extension 'ros'
+[0.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/erl1' with type 'ros.ament_cmake' and name 'erl1'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'ros'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['cmake', 'python']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'cmake'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'python'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extensions ['python_setup_py']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors) by extension 'python_setup_py'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/erl1_sensors/bme_gazebo_sensors) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'src/erl1_sensors/bme_gazebo_sensors' with type 'ros.ament_cmake' and name 'bme_gazebo_sensors'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/plansys_interface) by extension 'ros'
+[0.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/plansys_interface' with type 'ros.ament_cmake' and name 'plansys_interface'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'ros'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['cmake', 'python']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'cmake'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'python'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extensions ['python_setup_py']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv) by extension 'python_setup_py'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv) by extension 'ros'
+[0.287s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_aruco_opencv/aruco_opencv' with type 'ros.ament_cmake' and name 'aruco_opencv'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_aruco_opencv/aruco_opencv_msgs) by extension 'ros'
+[0.289s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_aruco_opencv/aruco_opencv_msgs' with type 'ros.ament_cmake' and name 'aruco_opencv_msgs'
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_target' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.316s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_opencv_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/assignments/assignment3/ws/build/aruco_opencv_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/assignments/assignment3/ws/install/aruco_opencv_msgs', 'merge_install': False, 'path': '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_target' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'bme_gazebo_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.316s] DEBUG:colcon.colcon_core.verb:Building package 'bme_gazebo_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/assignments/assignment3/ws/build/bme_gazebo_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/assignments/assignment3/ws/install/bme_gazebo_sensors', 'merge_install': False, 'path': '/home/assignments/assignment3/ws/src/erl1_sensors/bme_gazebo_sensors', 'symlink_install': False, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'erl1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.317s] DEBUG:colcon.colcon_core.verb:Building package 'erl1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/assignments/assignment3/ws/build/erl1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/assignments/assignment3/ws/install/erl1', 'merge_install': False, 'path': '/home/assignments/assignment3/ws/src/erl1', 'symlink_install': False, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'plansys_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'plansys_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/assignments/assignment3/ws/build/plansys_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/assignments/assignment3/ws/install/plansys_interface', 'merge_install': False, 'path': '/home/assignments/assignment3/ws/src/plansys_interface', 'symlink_install': False, 'test_result_base': None}
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_target' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'aruco_opencv' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_opencv' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/assignments/assignment3/ws/build/aruco_opencv', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/assignments/assignment3/ws/install/aruco_opencv', 'merge_install': False, 'path': '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv', 'symlink_install': False, 'test_result_base': None}
+[0.318s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.321s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv_msgs' with build type 'ament_cmake'
+[0.321s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv_msgs'
+[0.325s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.325s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.325s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.333s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/assignments/assignment3/ws/src/erl1_sensors/bme_gazebo_sensors' with build type 'ament_cmake'
+[0.333s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/assignments/assignment3/ws/src/erl1_sensors/bme_gazebo_sensors'
+[0.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.340s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/assignments/assignment3/ws/src/erl1' with build type 'ament_cmake'
+[0.340s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/assignments/assignment3/ws/src/erl1'
+[0.341s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.341s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.347s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/assignments/assignment3/ws/src/plansys_interface' with build type 'ament_cmake'
+[0.347s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/assignments/assignment3/ws/src/plansys_interface'
+[0.347s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.347s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/aruco_opencv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/aruco_opencv_msgs -- -j16 -l16
+[0.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/bme_gazebo_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/bme_gazebo_sensors -- -j16 -l16
+[0.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/erl1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/erl1 -- -j16 -l16
+[0.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/plansys_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/assignments/assignment3/ws/src/plansys_interface -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/plansys_interface
+[0.483s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/bme_gazebo_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/bme_gazebo_sensors -- -j16 -l16
+[0.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/bme_gazebo_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/bme_gazebo_sensors
+[0.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/erl1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/erl1 -- -j16 -l16
+[0.521s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/erl1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/erl1
+[0.547s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bme_gazebo_sensors)
+[0.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/bme_gazebo_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/bme_gazebo_sensors
+[0.558s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors' for CMake module files
+[0.559s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors' for CMake config files
+[0.559s] Level 1:colcon.colcon_core.shell:create_environment_hook('bme_gazebo_sensors', 'cmake_prefix_path')
+[0.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.ps1'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.dsv'
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.sh'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/bin'
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/lib/pkgconfig/bme_gazebo_sensors.pc'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/lib/python3.12/site-packages'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/bin'
+[0.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.ps1'
+[0.572s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.dsv'
+[0.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.sh'
+[0.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.bash'
+[0.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.zsh'
+[0.577s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/colcon-core/packages/bme_gazebo_sensors)
+[0.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bme_gazebo_sensors)
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors' for CMake module files
+[0.580s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors' for CMake config files
+[0.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('bme_gazebo_sensors', 'cmake_prefix_path')
+[0.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.ps1'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.dsv'
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/hook/cmake_prefix_path.sh'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/bin'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/lib/pkgconfig/bme_gazebo_sensors.pc'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/lib/python3.12/site-packages'
+[0.585s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/bin'
+[0.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.ps1'
+[0.587s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.dsv'
+[0.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.sh'
+[0.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.bash'
+[0.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/bme_gazebo_sensors/package.zsh'
+[0.590s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/bme_gazebo_sensors/share/colcon-core/packages/bme_gazebo_sensors)
+[0.593s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(erl1)
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1' for CMake module files
+[0.595s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/erl1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/erl1
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1' for CMake config files
+[0.597s] Level 1:colcon.colcon_core.shell:create_environment_hook('erl1', 'cmake_prefix_path')
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.dsv'
+[0.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.sh'
+[0.602s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/bin'
+[0.602s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/lib/pkgconfig/erl1.pc'
+[0.603s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/lib/python3.12/site-packages'
+[0.603s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/bin'
+[0.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.ps1'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.dsv'
+[0.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.sh'
+[0.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.bash'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.zsh'
+[0.610s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/erl1/share/colcon-core/packages/erl1)
+[0.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(erl1)
+[0.612s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1' for CMake module files
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1' for CMake config files
+[0.615s] Level 1:colcon.colcon_core.shell:create_environment_hook('erl1', 'cmake_prefix_path')
+[0.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.ps1'
+[0.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.dsv'
+[0.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/erl1/share/erl1/hook/cmake_prefix_path.sh'
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/bin'
+[0.624s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/lib/pkgconfig/erl1.pc'
+[0.624s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/lib/python3.12/site-packages'
+[0.625s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/erl1/bin'
+[0.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.ps1'
+[0.627s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.dsv'
+[0.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.sh'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.bash'
+[0.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/erl1/share/erl1/package.zsh'
+[0.633s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/erl1/share/colcon-core/packages/erl1)
+[1.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/aruco_opencv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/aruco_opencv_msgs -- -j16 -l16
+[1.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/aruco_opencv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/aruco_opencv_msgs
+[1.252s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_opencv_msgs)
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs' for CMake module files
+[1.253s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/aruco_opencv_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/aruco_opencv_msgs
+[1.253s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs' for CMake config files
+[1.254s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'cmake_prefix_path')
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.ps1'
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.dsv'
+[1.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.sh'
+[1.257s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib'
+[1.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'ld_library_path_lib')
+[1.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.ps1'
+[1.258s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.dsv'
+[1.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.sh'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/bin'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/pkgconfig/aruco_opencv_msgs.pc'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages'
+[1.261s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'pythonpath')
+[1.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.ps1'
+[1.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.dsv'
+[1.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.sh'
+[1.264s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/bin'
+[1.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.ps1'
+[1.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.dsv'
+[1.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.sh'
+[1.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.bash'
+[1.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.zsh'
+[1.268s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/colcon-core/packages/aruco_opencv_msgs)
+[1.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_opencv_msgs)
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs' for CMake module files
+[1.270s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs' for CMake config files
+[1.271s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'cmake_prefix_path')
+[1.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.ps1'
+[1.272s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.dsv'
+[1.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/cmake_prefix_path.sh'
+[1.273s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib'
+[1.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'ld_library_path_lib')
+[1.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.ps1'
+[1.274s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.dsv'
+[1.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/ld_library_path_lib.sh'
+[1.275s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/bin'
+[1.275s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/pkgconfig/aruco_opencv_msgs.pc'
+[1.276s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages'
+[1.276s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv_msgs', 'pythonpath')
+[1.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.ps1'
+[1.277s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.dsv'
+[1.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/hook/pythonpath.sh'
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/bin'
+[1.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.ps1'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.dsv'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.sh'
+[1.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.bash'
+[1.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.zsh'
+[1.283s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/colcon-core/packages/aruco_opencv_msgs)
+[1.283s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv' with build type 'ament_cmake'
+[1.284s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv'
+[1.284s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.284s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/aruco_opencv': AMENT_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/assignments/assignment3/ws/build/aruco_opencv -- -j16 -l16
+[1.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/aruco_opencv' returned '0': AMENT_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/assignments/assignment3/ws/build/aruco_opencv -- -j16 -l16
+[1.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/assignments/assignment3/ws/build/aruco_opencv': AMENT_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/assignments/assignment3/ws/build/aruco_opencv
+[1.574s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_opencv)
+[1.575s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv' for CMake module files
+[1.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/aruco_opencv' returned '0': AMENT_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/assignments/assignment3/ws/build/aruco_opencv
+[1.578s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv' for CMake config files
+[1.579s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv', 'cmake_prefix_path')
+[1.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.ps1'
+[1.581s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.dsv'
+[1.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.sh'
+[1.584s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib'
+[1.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv', 'ld_library_path_lib')
+[1.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.ps1'
+[1.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.dsv'
+[1.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.sh'
+[1.590s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/bin'
+[1.591s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib/pkgconfig/aruco_opencv.pc'
+[1.591s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib/python3.12/site-packages'
+[1.592s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/bin'
+[1.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.ps1'
+[1.596s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.dsv'
+[1.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.sh'
+[1.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.bash'
+[1.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.zsh'
+[1.605s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/aruco_opencv/share/colcon-core/packages/aruco_opencv)
+[1.606s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_opencv)
+[1.607s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv' for CMake module files
+[1.608s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv' for CMake config files
+[1.609s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv', 'cmake_prefix_path')
+[1.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.ps1'
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.dsv'
+[1.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/cmake_prefix_path.sh'
+[1.614s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib'
+[1.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_opencv', 'ld_library_path_lib')
+[1.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.ps1'
+[1.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.dsv'
+[1.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/hook/ld_library_path_lib.sh'
+[1.618s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/bin'
+[1.618s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib/pkgconfig/aruco_opencv.pc'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/lib/python3.12/site-packages'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/aruco_opencv/bin'
+[1.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.ps1'
+[1.621s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.dsv'
+[1.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.sh'
+[1.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.bash'
+[1.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/aruco_opencv/share/aruco_opencv/package.zsh'
+[1.627s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/aruco_opencv/share/colcon-core/packages/aruco_opencv)
+[1.630s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/assignments/assignment3/ws/build/plansys_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/assignments/assignment3/ws/src/plansys_interface -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/plansys_interface
+[1.663s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plansys_interface)
+[1.664s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface' for CMake module files
+[1.665s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface' for CMake config files
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface/bin'
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface/lib/pkgconfig/plansys_interface.pc'
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface/lib/python3.12/site-packages'
+[1.667s] Level 1:colcon.colcon_core.environment:checking '/home/assignments/assignment3/ws/install/plansys_interface/bin'
+[1.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.ps1'
+[1.668s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.dsv'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.sh'
+[1.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.bash'
+[1.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.zsh'
+[1.671s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/assignments/assignment3/ws/install/plansys_interface/share/colcon-core/packages/plansys_interface)
+[1.671s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.672s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[1.672s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.681s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.682s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.682s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.682s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.688s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[1.689s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.690s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/assignments/assignment3/ws/install/local_setup.ps1'
+[1.693s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/assignments/assignment3/ws/install/_local_setup_util_ps1.py'
+[1.696s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/assignments/assignment3/ws/install/setup.ps1'
+[1.698s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/assignments/assignment3/ws/install/local_setup.sh'
+[1.700s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/assignments/assignment3/ws/install/_local_setup_util_sh.py'
+[1.701s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/assignments/assignment3/ws/install/setup.sh'
+[1.703s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/assignments/assignment3/ws/install/local_setup.bash'
+[1.704s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/assignments/assignment3/ws/install/setup.bash'
+[1.706s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/assignments/assignment3/ws/install/local_setup.zsh'
+[1.707s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/assignments/assignment3/ws/install/setup.zsh'

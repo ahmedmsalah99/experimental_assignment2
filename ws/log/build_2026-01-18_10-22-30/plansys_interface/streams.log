@@ -1,0 +1,59 @@
+[0.049s] Invoking command in '/home/assignments/assignment3/ws/build/plansys_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/plansys_interface -- -j16 -l16
+[0.235s] [ 14%] Built target get_plan_and_execute
+[0.235s] [ 28%] Built target get_plan
+[0.247s] [ 42%] Built target ask_charge_action_node
+[0.253s] [ 57%] Built target charge_action_node
+[0.253s] [ 64%] [32mBuilding CXX object CMakeFiles/move_action_node_3.dir/src/move_action_node_3.cpp.o[0m
+[0.257s] [ 78%] Built target move_action_node_2
+[0.258s] [ 92%] Built target move_action_node
+[7.125s] [01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:[m[K In constructor ‘[01m[KMoveAction::[01;32m[KMoveAction[m[K()[m[K’:
+[7.126s] [01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:114:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KMoveAction::goal_sent_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[7.126s]   114 |   bool [01;35m[Kgoal_sent_[m[K;
+[7.126s]       |        [01;35m[K^~~~~~~~~~[m[K
+[7.126s] [01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:113:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kfloat MoveAction::progress_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[7.127s]   113 |   float [01;35m[Kprogress_[m[K;
+[7.127s]       |         [01;35m[K^~~~~~~~~[m[K
+[7.127s] [01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:19:3:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[7.127s]    19 |   [01;35m[KMoveAction[m[K()
+[7.127s]       |   [01;35m[K^~~~~~~~~~[m[K
+[18.945s] [100%] [32m[1mLinking CXX executable move_action_node_3[0m
+[21.032s] [100%] Built target move_action_node_3
+[21.065s] Invoked command in '/home/assignments/assignment3/ws/build/plansys_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/assignments/assignment3/ws/build/plansys_interface -- -j16 -l16
+[21.067s] Invoking command in '/home/assignments/assignment3/ws/build/plansys_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/plansys_interface
+[21.083s] -- Install configuration: ""
+[21.083s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain
+[21.083s] -- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/assignment_problem.pddl
+[21.084s] -- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/domain.pddl
+[21.084s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/problem.pddl
+[21.084s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/example.pddl
+[21.084s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch
+[21.084s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed.launch.py
+[21.084s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_2.launch.py
+[21.085s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_3.launch.py
+[21.085s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_ex.launch.py
+[21.085s] -- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_assignment.launch copy.py
+[21.085s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions.launch.py
+[21.085s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/get_plan
+[21.085s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/get_plan_and_execute
+[21.086s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node
+[21.087s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/ask_charge_action_node
+[21.087s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/charge_action_node
+[21.088s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_2
+[21.089s] -- Installing: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_3
+[21.102s] -- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_3" to ""
+[21.102s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/package_run_dependencies/plansys_interface
+[21.103s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/parent_prefix_path/plansys_interface
+[21.103s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/ament_prefix_path.sh
+[21.103s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/ament_prefix_path.dsv
+[21.104s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/path.sh
+[21.105s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/path.dsv
+[21.105s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.bash
+[21.105s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.sh
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.zsh
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.dsv
+[21.106s] -- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.dsv
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/packages/plansys_interface
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/cmake/plansys_interfaceConfig.cmake
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/cmake/plansys_interfaceConfig-version.cmake
+[21.106s] -- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.xml
+[21.112s] Invoked command in '/home/assignments/assignment3/ws/build/plansys_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/assignments/assignment3/ws/build/plansys_interface

@@ -1,0 +1,2 @@
+Invoking command in '/home/assignments/assignment3/ws/build/assignment2_exprob': /usr/bin/cmake /home/assignments/assignment3/ws/assignment2_exprob -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/assignment2_exprob
+Invoked command in '/home/assignments/assignment3/ws/build/assignment2_exprob' returned '1': /usr/bin/cmake /home/assignments/assignment3/ws/assignment2_exprob -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/assignment2_exprob

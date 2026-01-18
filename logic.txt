@@ -1,0 +1,22 @@
+Dsicovery phase:
+    During: 
+    - Repeat 4 times:
+        - go to next hint way point -> until reached
+        - Search by rotating around yourself -> until marker detected
+        - Record pose and ID of the marker
+Screenshots phase:
+    - Repeat 4 times:
+        - go to the lowest current ID pose -> until reached
+        - search by rotating around yourself -> until marker detected
+        - Take a screenshot with modified marker's image
+
+
+
+
+
+
+
+
+
+
+

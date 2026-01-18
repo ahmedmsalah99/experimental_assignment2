@@ -1,0 +1,86 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found plansys2_pddl_parser: 2.0.18 (/opt/ros/jazzy/share/plansys2_pddl_parser/cmake)
+-- Found plansys2_domain_expert: 2.0.18 (/opt/ros/jazzy/share/plansys2_domain_expert/cmake)
+-- Found plansys2_planner: 2.0.18 (/opt/ros/jazzy/share/plansys2_planner/cmake)
+-- Found plansys2_executor: 2.0.18 (/opt/ros/jazzy/share/plansys2_executor/cmake)
+-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (3.9s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/assignments/assignment3/ws/build/plansys_interface
+[ 12%] Built target get_plan
+[ 18%] [32mBuilding CXX object CMakeFiles/move_action_node_4.dir/src/move_action_node_4.cpp.o[0m
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_4.cpp:[m[K In constructor ‘[01m[KMoveAction::[01;32m[KMoveAction[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_4.cpp:114:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KMoveAction::goal_sent_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  114 |   bool [01;35m[Kgoal_sent_[m[K;
+      |        [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_4.cpp:113:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kfloat MoveAction::progress_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  113 |   float [01;35m[Kprogress_[m[K;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_4.cpp:19:3:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   19 |   [01;35m[KMoveAction[m[K()
+      |   [01;35m[K^~~~~~~~~~[m[K
+[ 25%] [32m[1mLinking CXX executable move_action_node_4[0m
+[ 25%] Built target move_action_node_4
+[ 37%] Built target move_action_node_3
+[ 50%] Built target move_action_node_2
+[ 62%] Built target charge_action_node
+[ 75%] Built target ask_charge_action_node
+[ 87%] Built target move_action_node
+[100%] Built target get_plan_and_execute
+-- Install configuration: ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/assignment_problem.pddl
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/domain.pddl
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/problem.pddl
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/domain/example.pddl
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_2.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_3.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_ex.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/launch/distributed_actions_assignment.launch.py
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/get_plan
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/get_plan_and_execute
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/ask_charge_action_node
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/charge_action_node
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_2
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_3
+-- Installing: /home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_4
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/plansys_interface/lib/plansys_interface/move_action_node_4" to ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/package_run_dependencies/plansys_interface
+-- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/parent_prefix_path/plansys_interface
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/ament_prefix_path.sh
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/path.sh
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/environment/path.dsv
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.bash
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.sh
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.zsh
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/local_setup.dsv
+-- Installing: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.dsv
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/ament_index/resource_index/packages/plansys_interface
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/cmake/plansys_interfaceConfig.cmake
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/cmake/plansys_interfaceConfig-version.cmake
+-- Up-to-date: /home/assignments/assignment3/ws/install/plansys_interface/share/plansys_interface/package.xml

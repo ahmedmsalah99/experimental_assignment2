@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.001277] (-) JobUnselected: {'identifier': 'aruco_opencv_msgs'}
+[0.001366] (-) JobUnselected: {'identifier': 'bme_gazebo_sensors'}
+[0.001407] (-) JobUnselected: {'identifier': 'erl1'}
+[0.001440] (-) JobUnselected: {'identifier': 'plansys_interface'}
+[0.001644] (aruco_opencv) JobQueued: {'identifier': 'aruco_opencv', 'dependencies': OrderedDict({'aruco_opencv_msgs': '/home/assignments/assignment3/ws/install/aruco_opencv_msgs'})}
+[0.001728] (aruco_opencv) JobStarted: {'identifier': 'aruco_opencv'}
+[0.022852] (aruco_opencv) JobEnded: {'identifier': 'aruco_opencv', 'rc': 1}
+[0.033655] (-) EventReactorShutdown: {}

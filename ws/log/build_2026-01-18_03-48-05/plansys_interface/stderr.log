@@ -1,0 +1,26 @@
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/ask_charge_action_node.cpp:[m[K In member function ‘[01m[Kvirtual void AskCharge::[01;32m[Kdo_work[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/ask_charge_action_node.cpp:31:18:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   31 |     std::cout << [01;35m[K"\r\e[K"[m[K << std::flush;
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_2.cpp:[m[K In member function ‘[01m[Kvirtual void MoveAction::[01;32m[Kdo_work[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_2.cpp:57:18:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   57 |     std::cout << [01;35m[K"\r\e[K"[m[K << std::flush;
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node.cpp:[m[K In member function ‘[01m[Kvirtual void MoveAction::[01;32m[Kdo_work[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node.cpp:29:18:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   29 |     std::cout << [01;35m[K"\r\e[K"[m[K << std::flush;
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/charge_action_node.cpp:[m[K In member function ‘[01m[Kvirtual void ChargeAction::[01;32m[Kdo_work[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/charge_action_node.cpp:30:18:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   30 |     std::cout << [01;35m[K"\r\e[K"[m[K << std::flush;
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:[m[K In constructor ‘[01m[KMoveAction::[01;32m[KMoveAction[m[K()[m[K’:
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:114:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KMoveAction::goal_sent_[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+  114 |   bool [01;35m[Kgoal_sent_[m[K;
+      |        [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:113:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kfloat MoveAction::progress_[m[K’ [[01;35m[K-Wreorder[m[K]
+  113 |   float [01;35m[Kprogress_[m[K;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/assignments/assignment3/ws/src/plansys_interface/src/move_action_node_3.cpp:19:3:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   19 |   [01;35m[KMoveAction[m[K()
+      |   [01;35m[K^~~~~~~~~~[m[K

@@ -1,0 +1,27 @@
+-- Install configuration: ""
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/launch
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/launch/mapping.launch.py
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/launch/navigation.launch.py
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/launch/localization.launch.py
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/config
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/config/amcl_localization.yaml
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/config/slam_toolbox_mapping.yaml
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/config/navigation.yaml
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/maps
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/maps/my_map.yaml
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/maps/my_map.pgm
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ament_index/resource_index/package_run_dependencies/ros2_navigation
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ament_index/resource_index/parent_prefix_path/ros2_navigation
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/environment/ament_prefix_path.sh
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/environment/ament_prefix_path.dsv
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/environment/path.sh
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/environment/path.dsv
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/local_setup.bash
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/local_setup.sh
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/local_setup.zsh
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/local_setup.dsv
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/package.dsv
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ament_index/resource_index/packages/ros2_navigation
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/cmake/ros2_navigationConfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/cmake/ros2_navigationConfig-version.cmake
+-- Installing: /home/assignments/assignment3/ws/install/ros2_navigation/share/ros2_navigation/package.xml

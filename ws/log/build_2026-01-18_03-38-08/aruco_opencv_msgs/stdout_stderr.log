@@ -1,0 +1,205 @@
+[  1%] Built target aruco_opencv_msgs__rosidl_generator_type_description
+[  1%] Built target ament_cmake_python_copy_aruco_opencv_msgs
+[  3%] Built target aruco_opencv_msgs__cpp
+[ 24%] Built target aruco_opencv_msgs__rosidl_generator_c
+[ 61%] Built target aruco_opencv_msgs__rosidl_typesupport_fastrtps_cpp
+[ 55%] Built target aruco_opencv_msgs__rosidl_typesupport_introspection_c
+[ 61%] Built target aruco_opencv_msgs__rosidl_typesupport_fastrtps_c
+[ 61%] Built target aruco_opencv_msgs__rosidl_typesupport_c
+[ 70%] Built target aruco_opencv_msgs__rosidl_typesupport_cpp
+[ 79%] Built target aruco_opencv_msgs__rosidl_typesupport_introspection_cpp
+[ 79%] Built target aruco_opencv_msgs
+[ 81%] Built target aruco_opencv_msgs__py
+[ 88%] Built target aruco_opencv_msgs__rosidl_generator_py
+running egg_info
+[ 96%] Built target aruco_opencv_msgs_s__rosidl_typesupport_c
+[ 96%] Built target aruco_opencv_msgs_s__rosidl_typesupport_fastrtps_c
+writing aruco_opencv_msgs.egg-info/PKG-INFO
+writing dependency_links to aruco_opencv_msgs.egg-info/dependency_links.txt
+writing top-level names to aruco_opencv_msgs.egg-info/top_level.txt
+[100%] Built target aruco_opencv_msgs_s__rosidl_typesupport_introspection_c
+reading manifest file 'aruco_opencv_msgs.egg-info/SOURCES.txt'
+writing manifest file 'aruco_opencv_msgs.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_aruco_opencv_msgs_egg
+-- Install configuration: ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/ament_index/resource_index/rosidl_interfaces/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/ArucoDetection.json
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/BoardPose.json
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/MarkerPose.json
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/aruco_detection.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__description.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__functions.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__description.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__struct.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__type_support.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__functions.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__type_support.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__struct.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__functions.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__struct.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__functions.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__functions.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__type_support.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__description.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__functions.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/marker_pose.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/board_pose.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/library_path.sh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/library_path.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__rosidl_typesupport_introspection_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__rosidl_typesupport_introspection_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__rosidl_typesupport_introspection_c.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__type_support.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__traits.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__type_support.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__struct.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__type_support.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__builder.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__traits.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__builder.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__struct.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__type_support.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__struct.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__builder.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__traits.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/board_pose.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/aruco_detection.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/marker_pose.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg
+-- Up-to-date: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__type_support.cpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__type_support.cpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/board_pose__type_support.cpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/marker_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/include/aruco_opencv_msgs/aruco_opencv_msgs/msg/detail/aruco_detection__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/pythonpath.sh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/pythonpath.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs-6.1.1-py3.12.egg-info
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs-6.1.1-py3.12.egg-info/dependency_links.txt
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs-6.1.1-py3.12.egg-info/top_level.txt
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs-6.1.1-py3.12.egg-info/PKG-INFO
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs-6.1.1-py3.12.egg-info/SOURCES.txt
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/__init__.py
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/_aruco_opencv_msgs_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_introspection_c.so
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_c.so
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/__init__.py
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_marker_pose_s.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_aruco_detection.py
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_board_pose.py
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_board_pose_s.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_marker_pose.py
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_aruco_detection_s.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/_aruco_opencv_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/_aruco_opencv_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+Listing '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs'...
+Compiling '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/__init__.py'...
+Listing '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg'...
+Compiling '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/__init__.py'...
+Compiling '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_aruco_detection.py'...
+Compiling '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_board_pose.py'...
+Compiling '/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/msg/_marker_pose.py'...
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/python3.12/site-packages/aruco_opencv_msgs/aruco_opencv_msgs_s__rosidl_typesupport_c.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/assignments/assignment3/ws/install/aruco_opencv_msgs/lib/libaruco_opencv_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/ArucoDetection.idl
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/BoardPose.idl
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/MarkerPose.idl
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/ArucoDetection.msg
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/BoardPose.msg
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/msg/MarkerPose.msg
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/ament_index/resource_index/package_run_dependencies/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/ament_index/resource_index/parent_prefix_path/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/path.sh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/environment/path.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/local_setup.bash
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/local_setup.sh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/local_setup.zsh
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/local_setup.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.dsv
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/ament_index/resource_index/packages/aruco_opencv_msgs
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/export_aruco_opencv_msgs__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgsConfig.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/cmake/aruco_opencv_msgsConfig-version.cmake
+-- Installing: /home/assignments/assignment3/ws/install/aruco_opencv_msgs/share/aruco_opencv_msgs/package.xml
