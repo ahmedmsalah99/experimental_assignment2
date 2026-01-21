@@ -1,26 +1,39 @@
-( define ( problem problem_1 )
-( :domain simple )
-( :objects
-	robot1  - robot
-  bedroom kitchen bathroom sitting_room corridor - room
-)
-( :init
-	( robot_at robot1 sitting_room)
+(define (problem marker_mission_problem)
+  (:domain marker_mission)
 
-  ( connected sitting_room corridor )
-  ( connected corridor sitting_room )
-  ( connected bedroom corridor )
-  ( connected corridor bedroom )
-  ( connected bedroom bathroom )
-  ( connected bathroom bedroom )
-  ( connected sitting_room kitchen )
-  ( connected kitchen sitting_room )
+  (:objects
+    robot1 - robot
 
-  ( charging_point_at corridor)
-  ( battery_low robot1)
-)
-( :goal
-	( and
-		( robot_at robot1 bathroom)
-	))
+    st wp1 wp2 wp3 wp4 - waypoint
+
+    m1 m2 m3 m4 - marker
+  )
+
+  (:init
+    (at robot1 st)
+    (move-possible robot1)
+    ;; marker visibility hints
+    (marker-visible-at m1 wp1)
+    (marker-visible-at m2 wp2)
+    (marker-visible-at m3 wp3)
+    (marker-visible-at m4 wp4)
+    ;; explicit connectivity (only legal moves)
+    (connected st wp1)
+    (connected wp1 st) 
+    (connected wp1 wp2)
+    (connected wp2 wp1)
+    (connected wp2 wp3)
+    (connected wp3 wp2)
+    (connected wp3 wp4)
+    (connected wp4 wp3)
+  )
+
+  (:goal
+    (and
+      (marker-photographed m1)
+      (marker-photographed m2)
+      (marker-photographed m3)
+      (marker-photographed m4)
+    )
+  )
 )

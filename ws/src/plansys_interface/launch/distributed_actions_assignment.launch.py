@@ -30,7 +30,7 @@ def generate_launch_description():
 
     declare_problem_file_cmd = DeclareLaunchArgument(
         'problem_file', 
-        default_value=os.path.join(interface_dir, "domain", "assignment_problem.pddl"),
+        default_value=os.path.join(interface_dir, "domain", "problem.pddl"),
         description='PDDL Problem file')
         
     declare_namespace_cmd = DeclareLaunchArgument(
@@ -129,27 +129,54 @@ def generate_launch_description():
         
     move_cmd = Node(
         package='plansys_interface',
-        executable='move_action_node_4',
+        executable='move_action_node_3',
         name='move_action_node',
         namespace=namespace,
         output='screen',
         parameters=[])
 
-    charge_cmd = Node(
+
+
+
+    rotate_detect_cmd = Node(
         package='plansys_interface',
-        executable='charge_action_node',
-        name='charge_action_node',
+        executable='rotate_and_detect_action_node',
+        name='rotate_and_detect_action_node',
         namespace=namespace,
         output='screen',
         parameters=[])
 
-    ask_charge_cmd = Node(
+    photograph_cmd = Node(
         package='plansys_interface',
-        executable='ask_charge_action_node',
-        name='ask_charge_action_node',
+        executable='photograph_marker_action_node',
+        name='photograph_marker_action_node',
         namespace=namespace,
         output='screen',
         parameters=[])  
+
+    align_cmd = Node(
+        package='plansys_interface',
+        executable='align_action_node',
+        name='align_action_node',
+        namespace=namespace,
+        output='screen',
+        parameters=[])
+
+    world_cmd = Node(
+        package='plansys_interface',
+        executable='world_node',
+        name='world_node',
+        namespace=namespace,
+        output='screen',
+        parameters=[])  
+
+    # Include aruco_tracker launch
+    aruco_tracker_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_directory('aruco_opencv'),
+            'launch',
+            'aruco_tracker.launch.xml')),
+        launch_arguments={}.items())
         
     ld = LaunchDescription()
 
@@ -168,7 +195,10 @@ def generate_launch_description():
     ld.add_action(executor_cmd)
     ld.add_action(lifecycle_manager_cmd)
     ld.add_action(move_cmd)
-    ld.add_action(charge_cmd)
-    ld.add_action(ask_charge_cmd)
+    ld.add_action(rotate_detect_cmd)
+    ld.add_action(photograph_cmd)
+    ld.add_action(align_cmd)
+    ld.add_action(world_cmd)
+    ld.add_action(aruco_tracker_cmd)
     
     return ld

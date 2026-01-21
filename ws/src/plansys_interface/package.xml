@@ -6,7 +6,7 @@
   <description>TODO: Package description</description>
   <maintainer email="carmine.recchiuto@dibris.unige.it">root</maintainer>
   <license>TODO: License declaration</license>
-
+  <depend>plansys2_interface</depend>
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <test_depend>ament_lint_auto</test_depend>

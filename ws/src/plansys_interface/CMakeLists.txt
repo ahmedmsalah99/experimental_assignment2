@@ -17,6 +17,10 @@ find_package(plansys2_executor REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav2_msgs REQUIRED)
+find_package(aruco_opencv_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(plansys2_interface REQUIRED)
 
 
 add_executable(get_plan src/getplan.cpp)
@@ -27,6 +31,10 @@ add_executable(charge_action_node src/charge_action_node.cpp)
 add_executable(move_action_node_2 src/move_action_node_2.cpp)
 add_executable(move_action_node_3 src/move_action_node_3.cpp)
 add_executable(move_action_node_4 src/move_action_node_4.cpp)
+add_executable(rotate_and_detect_action_node src/rotate_and_detect_action_node.cpp)
+add_executable(photograph_marker_action_node src/photograph_marker_action_node.cpp)
+add_executable(align_action_node src/align_action_node.cpp)
+add_executable(world_node src/world_node.cpp)
 
 ament_target_dependencies(get_plan
   rclcpp
@@ -84,6 +92,7 @@ ament_target_dependencies(move_action_node_3
   plansys2_msgs
   geometry_msgs
   nav2_msgs
+  plansys2_interface
 )
 ament_target_dependencies(move_action_node_4
   rclcpp
@@ -93,6 +102,46 @@ ament_target_dependencies(move_action_node_4
   geometry_msgs
   nav2_msgs
 )
+
+ament_target_dependencies(rotate_and_detect_action_node
+  rclcpp
+  rclcpp_action
+  plansys2_executor
+  plansys2_msgs
+  geometry_msgs
+  aruco_opencv_msgs
+  nav2_msgs
+  plansys2_interface
+)
+
+ament_target_dependencies(photograph_marker_action_node
+  rclcpp
+  rclcpp_action
+  plansys2_executor
+  plansys2_msgs
+  geometry_msgs
+  nav2_msgs
+  sensor_msgs
+  aruco_opencv_msgs
+  cv_bridge
+)
+
+ament_target_dependencies(align_action_node
+  rclcpp
+  rclcpp_action
+  plansys2_executor
+  plansys2_msgs
+  geometry_msgs
+  aruco_opencv_msgs
+)
+
+ament_target_dependencies(world_node
+  rclcpp
+  geometry_msgs
+  aruco_opencv_msgs
+  plansys2_interface
+)
+
 install(DIRECTORY
   domain
   launch
@@ -100,7 +149,7 @@ install(DIRECTORY
 )
 
 install(TARGETS
-  get_plan get_plan_and_execute move_action_node ask_charge_action_node charge_action_node move_action_node_2 move_action_node_3 move_action_node_4 
+  get_plan get_plan_and_execute move_action_node ask_charge_action_node charge_action_node move_action_node_2 move_action_node_3 move_action_node_4 rotate_and_detect_action_node photograph_marker_action_node align_action_node world_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

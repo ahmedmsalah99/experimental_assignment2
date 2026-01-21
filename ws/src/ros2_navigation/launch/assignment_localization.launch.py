@@ -31,7 +31,7 @@ def generate_launch_description():
     map_file_path = os.path.join(
         get_package_share_directory('ros2_navigation'),
         'maps',
-        'assignment_map.yaml'
+        'final_map.yaml'
     )
 
 
