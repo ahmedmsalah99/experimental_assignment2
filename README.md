@@ -33,7 +33,7 @@ ros2 launch plansys_interface distributed_actions_assignment.launch.py
 2. The simulation
 
 ```bash
-ros2 launch bme_gazebo_sensors spawn_robot.launch.py   world:=simple_world.sdf   rviz_config:=gps.rviz   x:=0 y:=8.5 z:=0.1
+ros2 launch bme_gazebo_sensors spawn_robot.launch.py   world:=simple_world.sdf   rviz_config:=gps.rviz   x:=0 y:=1.0 z:=0.1
 ```
 
 3. The localization (map is generated)
