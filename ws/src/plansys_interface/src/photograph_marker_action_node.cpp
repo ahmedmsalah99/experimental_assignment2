@@ -22,7 +22,7 @@ class PhotographMarkerAction : public plansys2::ActionExecutorClient
 public:
   PhotographMarkerAction()
   : plansys2::ActionExecutorClient("photographmarker", 100ms),
-    waiting_for_photo_(true),
+    waiting_for_photo_(false),
     photo_taken_(false)
   {
 
@@ -38,7 +38,6 @@ public:
     image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
       "/camera/image", 10,
       [this](const sensor_msgs::msg::Image::SharedPtr msg) {
-        if (!waiting_for_photo_) return;
         take_photo(msg);
       }
     );
@@ -78,7 +77,8 @@ private:
 
   void take_photo(const sensor_msgs::msg::Image::SharedPtr& msg)
   {
-
+    if(!waiting_for_photo_)
+      return;
     try {
       cv::Mat frame = cv_bridge::toCvShare(msg, "bgr8")->image.clone();
       
@@ -104,7 +104,6 @@ private:
       } else {
         return;
       }
-      waiting_for_photo_ = false;
     } catch (cv_bridge::Exception& e) {
       RCLCPP_ERROR(get_logger(), "CV Bridge: %s", e.what());
     }
@@ -113,32 +112,33 @@ private:
   void do_work() override
   {
     auto args = get_arguments();
-    if (args.size() < 4) {
+    if (args.size() < 3) {
       finish(false, 0.0, "Insufficient arguments");
       return;
     }
     if(!waiting_for_photo_){
       photo_start_ = this->now();
+      waiting_for_photo_ = true;
     }
     std::string marker_name = args[2];
     RCLCPP_INFO(get_logger(), "Photograph [%s]", marker_name.c_str());
     
-    waiting_for_photo_ = true;
-    if (waiting_for_photo_) {
-      auto elapsed = (this->now() -  photo_start_).seconds();
-      send_feedback(elapsed / 60.0, "Taking photo...");
+    auto elapsed = (this->now() - photo_start_).seconds();
+    double progress = elapsed / 60.0;
+    send_feedback(progress, "photographing...");
       
-      if (photo_taken_) {
-        photo_taken_ = false;
-        waiting_for_photo_ = false;
-        finish(true, 1.0, "Photo saved");
-      }
-      
-      if (elapsed > 60.0) {
-        waiting_for_photo_ = false;
-        finish(true, 1.0, "Photo timeout");
-      }
+    if (photo_taken_) {
+      photo_taken_ = false;
+      waiting_for_photo_ = false;
+      finish(true, 1.0, "Photo saved");
     }
+    
+    if (elapsed > 60.0) {
+      waiting_for_photo_ = false;
+      photo_taken_ = false;
+      finish(false, 1.0, "Photo timeout");
+    }
+    
     
   }
   

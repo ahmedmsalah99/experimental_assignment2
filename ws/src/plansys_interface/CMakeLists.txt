@@ -34,6 +34,7 @@ add_executable(move_action_node_4 src/move_action_node_4.cpp)
 add_executable(rotate_and_detect_action_node src/rotate_and_detect_action_node.cpp)
 add_executable(photograph_marker_action_node src/photograph_marker_action_node.cpp)
 add_executable(align_action_node src/align_action_node.cpp)
+add_executable(finish_detection_action_node src/finish_detection_action_node.cpp)
 add_executable(world_node src/world_node.cpp)
 
 ament_target_dependencies(get_plan
@@ -135,6 +136,13 @@ ament_target_dependencies(align_action_node
   aruco_opencv_msgs
 )
 
+ament_target_dependencies(finish_detection_action_node
+  rclcpp
+  rclcpp_action
+  plansys2_executor
+  plansys2_msgs
+)
+
 ament_target_dependencies(world_node
   rclcpp
   geometry_msgs
@@ -149,7 +157,7 @@ install(DIRECTORY
 )
 
 install(TARGETS
-  get_plan get_plan_and_execute move_action_node ask_charge_action_node charge_action_node move_action_node_2 move_action_node_3 move_action_node_4 rotate_and_detect_action_node photograph_marker_action_node align_action_node world_node
+  get_plan get_plan_and_execute move_action_node ask_charge_action_node charge_action_node move_action_node_2 move_action_node_3 move_action_node_4 rotate_and_detect_action_node photograph_marker_action_node align_action_node finish_detection_action_node world_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

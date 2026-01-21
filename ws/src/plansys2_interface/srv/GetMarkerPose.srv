@@ -1,6 +1,5 @@
 int32 marker_id
-geometry_msgs/Pose pose
+string wp
 ---
 bool success
-geometry_msgs/Pose pose
-
+string wp

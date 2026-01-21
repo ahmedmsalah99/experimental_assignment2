@@ -1,9 +1,9 @@
 /**:
   ros__parameters:
-    cam_base_topic: camera/image_raw
+    cam_base_topic: /camera/image
     output_frame: ''
 
-    marker_dict: 4X4_50
+    marker_dict: ARUCO_ORIGINAL
 
     image_is_rectified: false
     image_sub_compressed: false

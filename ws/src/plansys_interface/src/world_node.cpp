@@ -1,15 +1,19 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "plansys2_interface/srv/get_marker_pose.hpp"
+#include "plansys2_interface/msg/detected_markers.hpp"
 #include <unordered_map>
 #include <vector>
 #include <algorithm>
 #include <memory>
 #include <string>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 struct MarkerInfo {
   int marker_id;
-  geometry_msgs::msg::Pose robot_pose;
+  std::string robot_wp;
 };
 
 class WorldNode : public rclcpp::Node
@@ -32,6 +36,13 @@ public:
                 std::placeholders::_1, std::placeholders::_2)
     );
     
+    // Publisher for all detected markers
+    detected_markers_pub_ = this->create_publisher<plansys2_interface::msg::DetectedMarkers>(
+      "/world_node/detected_markers", 10);
+    
+    // Timer for periodic publishing
+    timer_ = this->create_wall_timer(500ms, std::bind(&WorldNode::publish_markers_timer, this));
+    
     RCLCPP_INFO(get_logger(), "WorldNode initialized");
   }
 
@@ -45,12 +56,12 @@ private:
     // Store marker info
     MarkerInfo info;
     info.marker_id = marker_id;
-    info.robot_pose = req->pose;
+    info.robot_wp = req->wp;
     markers_[marker_id] = info;
     
     RCLCPP_INFO(get_logger(), "Added marker ID %d", marker_id);
     res->success = true;
-    res->pose = req->pose;
+    res->wp = req->wp;
   }
   
   void get_nth_marker_callback(
@@ -80,15 +91,40 @@ private:
     
     int nth_id = sorted_ids[n];
     res->success = true;
-    res->pose = markers_[nth_id].robot_pose;
+    res->wp = markers_[nth_id].robot_wp;
     RCLCPP_INFO(get_logger(), "Nth marker (n=%d): ID %d", n, nth_id);
   }
+  
+  void publish_markers_timer()
+  {
+    plansys2_interface::msg::DetectedMarkers msg;
+    
+    // Create sorted vector of marker IDs
+    std::vector<int> sorted_ids;
+    for (const auto& [id, info] : markers_) {
+      sorted_ids.push_back(id);
+    }
+    std::sort(sorted_ids.begin(), sorted_ids.end());
+    
+    // Add markers in sorted order
+    for (const int& id : sorted_ids) {
+      plansys2_interface::msg::DetectedMarker marker;
+      marker.marker_id = markers_[id].marker_id;
+      marker.wp = markers_[id].robot_wp;
+      msg.markers.push_back(marker);
+    }
+    
+    detected_markers_pub_->publish(msg);
+  }
+
   
   // Store detected markers: marker_id -> MarkerInfo
   std::unordered_map<int, MarkerInfo> markers_;
   
   rclcpp::Service<plansys2_interface::srv::GetMarkerPose>::SharedPtr add_marker_srv_;
   rclcpp::Service<plansys2_interface::srv::GetMarkerPose>::SharedPtr get_nth_marker_srv_;
+  rclcpp::Publisher<plansys2_interface::msg::DetectedMarkers>::SharedPtr detected_markers_pub_;
+  rclcpp::TimerBase::SharedPtr timer_;
 };
 
 int main(int argc, char ** argv)

@@ -47,7 +47,7 @@
 
   ;; This action becomes possible only once all specified markers are detected.
   ;; It sets the phase flag allowing photographs to be taken.
-  (:action finish-detection
+  (:action finishdetection
     :parameters (?r -robot ?m1 - marker ?m2 - marker ?m3 -marker ?m4 -marker ?w1 - waypoint ?w2 - waypoint ?w3 - waypoint ?w4 - waypoint ?st - waypoint)
     :precondition (and
       ;; NOTE: list here every marker that must be detected before photographing

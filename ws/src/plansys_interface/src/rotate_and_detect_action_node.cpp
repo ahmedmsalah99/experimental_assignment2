@@ -57,7 +57,6 @@ private:
   
   void detection_callback(const aruco_opencv_msgs::msg::ArucoDetection::SharedPtr msg)
   {
-    std::lock_guard<std::mutex> lock(mutex_);
     
     if (!rotation_active_) return;
     if (msg->markers.empty()) return;
@@ -88,10 +87,10 @@ private:
       return;
     }
     
-    std::string waypoint = args[1];
+    current_wp_ = args[1];
     std::string marker_name = args[2];
     
-    RCLCPP_INFO(get_logger(), "Rotate-and-detect at [%s] for [%s]", waypoint.c_str(), marker_name.c_str());
+    RCLCPP_INFO(get_logger(), "Rotate-and-detect at [%s] for [%s]", current_wp_.c_str(), marker_name.c_str());
     
     if (!rotation_active_ && !marker_detected_) {
       rotation_active_ = true;
@@ -123,7 +122,6 @@ private:
     send_feedback(progress, "Rotating to detect...");
     
     {
-      std::lock_guard<std::mutex> lock(mutex_);
       if (marker_detected_) {
         geometry_msgs::msg::Twist stop_cmd;
         cmd_vel_pub_->publish(stop_cmd);
@@ -131,7 +129,7 @@ private:
         marker_detected_ = false;
         
         // Register marker in world node
-        register_marker(current_marker_id_, robot_pose_);
+        register_marker(current_marker_id_);
         
         RCLCPP_INFO(get_logger(), "Marker %d detected and registered", current_marker_id_);
         finish(true, 1.0, "Marker detected");
@@ -139,11 +137,11 @@ private:
     }
   }
   
-  bool register_marker(int marker_id, const geometry_msgs::msg::Pose& pose)
+  bool register_marker(int marker_id)
   {
     auto request = std::make_shared<plansys2_interface::srv::GetMarkerPose::Request>();
     request->marker_id = marker_id;
-    request->pose = pose;
+    request->wp = current_wp_;
     
     if (!world_client_->wait_for_service(1s)) {
       RCLCPP_WARN(get_logger(), "World node service not available");
@@ -151,15 +149,16 @@ private:
     }
     
     auto future = world_client_->async_send_request(request);
-    auto result = future.get();
+    return true;
+    // auto result = future.get();
     
-    if (result->success) {
-      RCLCPP_INFO(get_logger(), "Registered marker %d in world node", marker_id);
-      return true;
-    } else {
-      RCLCPP_ERROR(get_logger(), "Failed to register marker %d", marker_id);
-      return false;
-    }
+    // if (result->success) {
+    //   RCLCPP_INFO(get_logger(), "Registered marker %d in world node", marker_id);
+    //   return true;
+    // } else {
+    //   RCLCPP_ERROR(get_logger(), "Failed to register marker %d", marker_id);
+    //   return false;
+    // }
   }
   
   bool rotation_active_;
@@ -169,7 +168,7 @@ private:
   geometry_msgs::msg::Pose detected_pose_;
   geometry_msgs::msg::Pose robot_pose_;
   std::mutex mutex_;
-  
+  std::string current_wp_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_;
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
   rclcpp::Subscription<aruco_opencv_msgs::msg::ArucoDetection>::SharedPtr detection_sub_;

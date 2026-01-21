@@ -5,12 +5,13 @@
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "lifecycle_msgs/msg/transition.hpp"
-#include "plansys2_interface/srv/get_marker_pose.hpp"
+#include "plansys2_interface/msg/detected_markers.hpp"
 #include <memory>
 #include <chrono>
 #include <string>
 #include <algorithm>
 #include <cmath>
+#include <vector>
 
 using namespace std::chrono_literals;
 
@@ -22,7 +23,8 @@ public:
     goal_sent_(false), 
     progress_(0.0),
     visited_waypoints_(0),
-    nth_request_index_(0)
+    nth_request_index_(0),
+    info_requested_(false)
   {
     odom_ = this->create_subscription<nav_msgs::msg::Odometry>(
       "/odom", 10,
@@ -34,9 +36,10 @@ public:
       nav2_node_, "navigate_to_pose"
     );
     
-    // Service client to get nth marker pose from world node
-    world_client_ = nav2_node_->create_client<plansys2_interface::srv::GetMarkerPose>(
-      "/world_node/get_nth_marker"
+    // Subscriber to get all detected markers from world node
+    detected_markers_sub_ = this->create_subscription<plansys2_interface::msg::DetectedMarkers>(
+      "/world_node/detected_markers", 10,
+      std::bind(&MoveAction::detected_markers_callback, this, std::placeholders::_1)
     );
   }
 
@@ -59,8 +62,27 @@ private:
     std::string wp_to_navigate = args[2];
 
     double goal_x, goal_y;
-    // Waypoint coordinates as per assignment hints
-    if (visited_waypoints_ < 4) {
+    // Waypoint coordinates as per assignment 
+    if(visited_waypoints_ >= 4){
+      // Use cached markers from subscription (already sorted by world_node)
+      if (!cached_markers_.empty() && nth_request_index_ < static_cast<int>(cached_markers_.size())) {
+        marker_wp_ = cached_markers_[nth_request_index_].wp;
+        nth_request_index_++;
+        RCLCPP_INFO(get_logger(), "Got nth(%d) marker wp: %s",
+                    nth_request_index_ - 1, marker_wp_.c_str());
+      } else if (cached_markers_.empty()) {
+        RCLCPP_WARN(get_logger(), "No markers received yet");
+        return;
+      } else {
+        RCLCPP_INFO(get_logger(), "All markers already requested");
+        return;
+      }
+      
+      if(marker_wp_ == "")
+        return;
+      wp_to_navigate = marker_wp_;
+      marker_wp_ = "";
+    }
       if (wp_to_navigate == "wp1") {
         goal_x = -6.0;
         goal_y = -6.0;
@@ -78,15 +100,7 @@ private:
         finish(false, 0.0, "Unknown waypoint");
         return;
       }
-    } else {
-      // Request nth marker pose from world node after visiting 4 waypoints
-      if (!request_marker_pose()) {
-        return; // Still waiting for service
-      }
-      goal_x = marker_pose_.position.x;
-      goal_y = marker_pose_.position.y;
-      RCLCPP_INFO(get_logger(), "Navigating to marker pose (%.2f, %.2f)", goal_x, goal_y);
-    }
+    
 
     if (!goal_sent_) {
       if (!nav2_client_->wait_for_action_server(1s)) {
@@ -151,31 +165,11 @@ private:
     // rclcpp::spin_some(nav2_node_);
   }
 
-  bool request_marker_pose()
+  void detected_markers_callback(const plansys2_interface::msg::DetectedMarkers::SharedPtr msg)
   {
-    // Request nth marker based on request index
-    auto request = std::make_shared<plansys2_interface::srv::GetMarkerPose::Request>();
-    request->marker_id = nth_request_index_;  // Use as nth index
-    request->pose = geometry_msgs::msg::Pose();
-    
-    if (!world_client_->wait_for_service(1s)) {
-      RCLCPP_WARN(get_logger(), "World node service not available");
-      return false;
-    }
-    
-    auto future = world_client_->async_send_request(request);
-    auto result = future.get();
-    
-    if (result->success) {
-      marker_pose_ = result->pose;
-      nth_request_index_++;
-      RCLCPP_INFO(get_logger(), "Got nth(%d) marker pose: (%.2f, %.2f)", 
-                  nth_request_index_ - 1, marker_pose_.position.x, marker_pose_.position.y);
-      return true;
-    } else {
-      RCLCPP_ERROR(get_logger(), "Failed to get nth marker pose");
-      return false;
-    }
+    // Cache the received markers
+    cached_markers_ = msg->markers;
+    RCLCPP_INFO(get_logger(), "Received %zu detected markers", cached_markers_.size());
   }
 
   void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
@@ -184,18 +178,23 @@ private:
     current_y_ = msg->pose.pose.position.y;
   }
 
+
   float progress_;
   bool goal_sent_;
   double start_x_ = 0.0, start_y_ = 0.0;
   double current_x_ = 0.0, current_y_ = 0.0;
-  
+  std::string marker_wp_;
   int visited_waypoints_;
   int nth_request_index_;
+  bool info_requested_;
   geometry_msgs::msg::Pose marker_pose_;
+
+  // Cached markers from subscription
+  std::vector<plansys2_interface::msg::DetectedMarker> cached_markers_;
 
   rclcpp::Node::SharedPtr nav2_node_;
   rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr nav2_client_;
-  rclcpp::Client<plansys2_interface::srv::GetMarkerPose>::SharedPtr world_client_;
+  rclcpp::Subscription<plansys2_interface::msg::DetectedMarkers>::SharedPtr detected_markers_sub_;
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_;
 };
 

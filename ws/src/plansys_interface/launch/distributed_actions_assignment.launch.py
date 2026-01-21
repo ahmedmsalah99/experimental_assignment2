@@ -5,6 +5,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
+
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -162,6 +164,14 @@ def generate_launch_description():
         output='screen',
         parameters=[])
 
+    finish_detection_cmd = Node(
+        package='plansys_interface',
+        executable='finish_detection_action_node',
+        name='finish_detection_action_node',
+        namespace=namespace,
+        output='screen',
+        parameters=[])
+
     world_cmd = Node(
         package='plansys_interface',
         executable='world_node',
@@ -172,11 +182,14 @@ def generate_launch_description():
 
     # Include aruco_tracker launch
     aruco_tracker_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(
-            get_package_share_directory('aruco_opencv'),
-            'launch',
-            'aruco_tracker.launch.xml')),
-        launch_arguments={}.items())
+        XMLLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('aruco_opencv'),
+                'launch',
+                'aruco_tracker.launch.xml'
+            )
+        )
+    )
         
     ld = LaunchDescription()
 
@@ -198,6 +211,7 @@ def generate_launch_description():
     ld.add_action(rotate_detect_cmd)
     ld.add_action(photograph_cmd)
     ld.add_action(align_cmd)
+    ld.add_action(finish_detection_cmd)
     ld.add_action(world_cmd)
     ld.add_action(aruco_tracker_cmd)
     

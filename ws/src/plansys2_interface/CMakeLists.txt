@@ -15,6 +15,8 @@ find_package(rosidl_default_generators REQUIRED)
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GetMarkerPose.srv"
+  "msg/DetectedMarker.msg"
+  "msg/DetectedMarkers.msg"
   DEPENDENCIES std_msgs geometry_msgs
 )
 
