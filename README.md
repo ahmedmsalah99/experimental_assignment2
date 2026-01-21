@@ -1,5 +1,8 @@
 ## Overview
 The implementation is inside "ws/src/plansys_interface" 
+Author/ID: Ahmed_Yousef/6848239 - Maze_Atta/7146206 - Mohamed_Ismail/6655420
+
+Course: Experimental Robotics Laboratorty-University of Genoa
 
 This project develops a ROS 2-based autonomous mobile robot system that detects visual markers in the environment using an onboard camera and executes a task-level plan to visit and process them in order of increasing marker ID. The system is implemented primarily in simulation, using a provided Gazebo world (assignment2.world), and is structured to be extensible to a real robot.
 
