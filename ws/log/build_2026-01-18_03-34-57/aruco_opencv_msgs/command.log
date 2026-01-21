@@ -1,1 +1,0 @@
-Invoking command in '/home/assignments/assignment3/ws/build/aruco_opencv_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/assignments/assignment3/ws/src/ros_aruco_opencv/aruco_opencv_msgs -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/aruco_opencv_msgs

@@ -1,1 +1,0 @@
-Invoking command in '/home/assignments/assignment3/ws/build/ros2_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/assignments/assignment3/ws/src/ros2_navigation -DCMAKE_INSTALL_PREFIX=/home/assignments/assignment3/ws/install/ros2_navigation
