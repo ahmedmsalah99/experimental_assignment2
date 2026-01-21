@@ -1,3 +1,19 @@
+## Overview
+The implementation is inside "ws/src/plansys_interface" 
+
+This project develops a ROS 2-based autonomous mobile robot system that detects visual markers in the environment using an onboard camera and executes a task-level plan to visit and process them in order of increasing marker ID. The system is implemented primarily in simulation, using a provided Gazebo world (assignment2.world), and is structured to be extensible to a real robot.
+
+High-level decision making and execution are handled using PlanSys2, which enables symbolic planning over discrete actions such as navigation, marker detection, and image acquisition.
+
+### Video
+[Demo](resources/exp2.mp4)
+
+### Screenshots
+![0](resources/0.png)
+![64](resources/64.png)
+![320](resources/320.png)
+![512](resources/512.png)
+
 ## Setup
 
 1. To start, make sure that aruco_box folder (the model folder) is in your /home/ubuntu/gazebo_models/
