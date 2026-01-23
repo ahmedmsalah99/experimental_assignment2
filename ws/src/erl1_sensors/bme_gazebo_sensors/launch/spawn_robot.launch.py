@@ -6,9 +6,18 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
+import os
+import xacro
+from ament_index_python.packages import get_package_share_directory
 
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
 def generate_launch_description():
-
+    robot_name = "differential_drive_robot"
+    package_name = "gazebo_differential_drive_robot"
     pkg_bme_gazebo_sensors = get_package_share_directory('bme_gazebo_sensors')
     pkg_gazebo_differential_drive_robot = get_package_share_directory('gazebo_differential_drive_robot')
     pkg_erl1 = get_package_share_directory('erl1')
@@ -66,7 +75,7 @@ def generate_launch_description():
     yaw = LaunchConfiguration('Y')
 
     robot_model_path = os.path.join(
-        get_package_share_directory(package_name),
+        get_package_share_directory('gazebo_differential_drive_robot'),
         'model',
         'robot.xacro'
     )
@@ -80,9 +89,9 @@ def generate_launch_description():
 
     # Define the path to your URDF or Xacro file
     urdf_file_path = PathJoinSubstitution([
-        pkg_bme_gazebo_sensors,  # Replace with your package name
-        "urdf",
-        LaunchConfiguration('model')  # Replace with your URDF or Xacro file
+        pkg_gazebo_differential_drive_robot,  # Replace with your package name
+        "model",
+        'robot.xacro'
     ])
 
     world_launch = IncludeLaunchDescription(
@@ -106,20 +115,38 @@ def generate_launch_description():
     )
 
     # Spawn the URDF model using the `/world/<world_name>/create` service
+    # spawn_urdf_node = Node(
+    #     package="ros_gz_sim",
+    #     executable="create",
+    #     arguments=[
+    #         "-name", "diff_bot",
+    #         "-topic", "robot_description",
+    #         "-x", LaunchConfiguration('x'), "-y", LaunchConfiguration('y'), "-z", "0.5", "-Y", LaunchConfiguration('yaw')  # Initial spawn position
+    #     ],
+    #     output="screen",
+    #     parameters=[
+    #         {'use_sim_time': LaunchConfiguration('use_sim_time')},
+    #     ]
+    # )
     spawn_urdf_node = Node(
-        package="ros_gz_sim",
-        executable="create",
+        package='ros_gz_sim',
+        executable='create',
         arguments=[
-            "-name", "mogi_bot",
-            "-topic", "robot_description",
-            "-x", LaunchConfiguration('x'), "-y", LaunchConfiguration('y'), "-z", "0.5", "-Y", LaunchConfiguration('yaw')  # Initial spawn position
+            '-name', robot_name,
+            '-string', robot_description,
+            '-x', x,
+            '-y', y,
+            '-z', z,
+            '-R', roll,
+            '-P', pitch,
+            '-Y', yaw,
+            '-allow_renaming', 'false'
         ],
-        output="screen",
+        output='screen',
         parameters=[
-            {'use_sim_time': LaunchConfiguration('use_sim_time')},
-        ]
+             {'use_sim_time': LaunchConfiguration('use_sim_time')},
+         ]
     )
-
     # Node to bridge /cmd_vel and /odom
     gz_bridge_node = Node(
         package="ros_gz_bridge",
@@ -143,14 +170,29 @@ def generate_launch_description():
         ]
     )
 
+    # robot_state_publisher_node = Node(
+    #     package='robot_state_publisher',
+    #     executable='robot_state_publisher',
+    #     name='robot_state_publisher',
+    #     output='screen',
+    #     parameters=[
+    #         {'robot_description': Command(['xacro', ' ', urdf_file_path]),
+    #          'use_sim_time': LaunchConfiguration('use_sim_time')},
+    #     ],
+    #     remappings=[
+    #         ('/tf', 'tf'),
+    #         ('/tf_static', 'tf_static')
+    #     ]
+    # )
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         name='robot_state_publisher',
         output='screen',
         parameters=[
-            {'robot_description': Command(['xacro', ' ', urdf_file_path]),
-             'use_sim_time': LaunchConfiguration('use_sim_time')},
+            {'robot_description': robot_description, 'use_sim_time': LaunchConfiguration('use_sim_time')}
+            # {'robot_description': Command(['xacro', ' ', urdf_file_path]),
+            #  'use_sim_time': LaunchConfiguration('use_sim_time')},
         ],
         remappings=[
             ('/tf', 'tf'),
@@ -187,10 +229,12 @@ def generate_launch_description():
     launchDescriptionObject.add_action(rviz_launch_arg)
     launchDescriptionObject.add_action(rviz_config_arg)
     launchDescriptionObject.add_action(world_arg)
-    launchDescriptionObject.add_action(model_arg)
+    # launchDescriptionObject.add_action(model_arg)
     launchDescriptionObject.add_action(x_arg)
     launchDescriptionObject.add_action(y_arg)
     launchDescriptionObject.add_action(yaw_arg)
+    launchDescriptionObject.add_action(roll_arg)
+    launchDescriptionObject.add_action(pitch_arg)
     launchDescriptionObject.add_action(sim_time_arg)
     launchDescriptionObject.add_action(world_launch)
     launchDescriptionObject.add_action(rviz_node)
