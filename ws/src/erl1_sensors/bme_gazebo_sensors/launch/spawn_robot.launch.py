@@ -148,26 +148,41 @@ def generate_launch_description():
          ]
     )
     # Node to bridge /cmd_vel and /odom
-    gz_bridge_node = Node(
-        package="ros_gz_bridge",
-        executable="parameter_bridge",
-        arguments=[
-            "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
-            "/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist",
-            "/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry",
-            "/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model",
-        #    "/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V",
-            # "/camera/image@sensor_msgs/msg/Image@gz.msgs.Image",
-            "/camera/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo",
-            "imu@sensor_msgs/msg/Imu@gz.msgs.IMU",
-            "/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat",
-            "/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan",
+    # gz_bridge_node = Node(
+    #     package="ros_gz_bridge",
+    #     executable="parameter_bridge",
+    #     arguments=[
+    #         "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
+    #         "/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist",
+    #         "/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry",
+    #         "/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model",
+    #     #    "/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V",
+    #         # "/camera/image@sensor_msgs/msg/Image@gz.msgs.Image",
+    #         "/camera/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo",
+    #         "imu@sensor_msgs/msg/Imu@gz.msgs.IMU",
+    #         "/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat",
+    #         "/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan",
+    #         "/odom@"
 
+    #     ],
+    #     output="screen",
+    #     parameters=[
+    #         {'use_sim_time': LaunchConfiguration('use_sim_time')},
+    #     ]
+    # )
+    gz_bridge_params_path = os.path.join(
+        get_package_share_directory(package_name),
+        'config',
+        'gz_bridge.yaml'
+    )
+    gz_bridge_node = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '--ros-args', '-p',
+            f'config_file:={gz_bridge_params_path}'
         ],
-        output="screen",
-        parameters=[
-            {'use_sim_time': LaunchConfiguration('use_sim_time')},
-        ]
+        output='screen'
     )
 
     # robot_state_publisher_node = Node(
