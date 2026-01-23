@@ -10,9 +10,13 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
 
     pkg_bme_gazebo_sensors = get_package_share_directory('bme_gazebo_sensors')
+    pkg_gazebo_differential_drive_robot = get_package_share_directory('gazebo_differential_drive_robot')
     pkg_erl1 = get_package_share_directory('erl1')
 
     gazebo_models_path, ignore_last_dir = os.path.split(pkg_bme_gazebo_sensors)
+    os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
+
+    gazebo_models_path, ignore_last_dir = os.path.split(pkg_gazebo_differential_drive_robot)
     os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
 
     rviz_launch_arg = DeclareLaunchArgument(
@@ -29,26 +33,45 @@ def generate_launch_description():
         'world', default_value='my_world.sdf',
         description='Name of the Gazebo world file to load'
     )
+    
 
-    model_arg = DeclareLaunchArgument(
-        'model', default_value='mogi_bot.urdf',
-        description='Name of the URDF description to load'
-    )
+    # model_arg = DeclareLaunchArgument(
+    #     'model', default_value='mogi_bot.urdf',
+    #     description='Name of the URDF description to load'
+    # )
 
     x_arg = DeclareLaunchArgument(
-        'x', default_value='2.5',
-        description='x coordinate of spawned robot'
-    )
+        'x', default_value='0.0', description='Initial X position')
 
     y_arg = DeclareLaunchArgument(
-        'y', default_value='1.5',
-        description='y coordinate of spawned robot'
-    )
+        'y', default_value='0.0', description='Initial Y position')
+
+    z_arg = DeclareLaunchArgument(
+        'z', default_value='0.5', description='Initial Z position')
+
+    roll_arg = DeclareLaunchArgument(
+        'R', default_value='0.0', description='Initial Roll')
+
+    pitch_arg = DeclareLaunchArgument(
+        'P', default_value='0.0', description='Initial Pitch')
 
     yaw_arg = DeclareLaunchArgument(
-        'yaw', default_value='-1.5707',
-        description='yaw angle of spawned robot'
+        'Y', default_value='0.0', description='Initial Yaw')
+
+    x = LaunchConfiguration('x')
+    y = LaunchConfiguration('y')
+    z = LaunchConfiguration('z')
+    roll = LaunchConfiguration('R')
+    pitch = LaunchConfiguration('P')
+    yaw = LaunchConfiguration('Y')
+
+    robot_model_path = os.path.join(
+        get_package_share_directory(package_name),
+        'model',
+        'robot.xacro'
     )
+    robot_description = xacro.process_file(robot_model_path).toxml()
+    
 
     sim_time_arg = DeclareLaunchArgument(
         'use_sim_time', default_value='True',
